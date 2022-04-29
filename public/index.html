@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyDv7YRz1WWPhkr6aim8wEm4WDPBdk81z54"></script> -->
+		<link rel="stylesheet" href="./src/gallery.theme.css" />
+		<link rel="stylesheet" href="./src/gallery.min.css" />
+		<link rel="stylesheet" href="./src/style.css" />
+		<link rel="shortcut icon" href="icon.ico" />
+		<title>Emovere Corporation</title>
+	</head>
+	<body>
+		<header>
+			<div id="title">
+				<img src="logo-emovere.png" />
+				<h1>EMOVERE</h1>
+			</div>
+			<ul>
+				<li class="list"><a href="/" data-link>Home</a></li>
+				<li class="list"><a href="/depoimentos" data-link>Depoimentos</a></li>
+				<li class="list"><a href="/store" data-link>Loja</a></li>
+				<li class="list"><a href="/carrinho" data-link>Meu Carrinho</a></li>
+				<li class="list"><a href="/minhaconta" data-link id="user_name"></a></li>
+				<li><a href="/criarconta" data-link id="inscreva-se-btn">Login</a></li>
+			</ul>
+		</header>
+
+		<div class="popup">
+			<div class="close-btn">&times;</div>
+			<div class="form">
+				<h2>Log in</h2>
+				<div class="form-element">
+					<label for="email">Email</label>
+					<input type="text" name="" id="email" placeholder="Email" />
+				</div>
+				<div class="form-element">
+					<label for="password">Password</label>
+					<input type="password" id="password" placeholder="Senha" />
+				</div>
+				<div class="form-element">
+					<input type="checkbox" id="remember-me" />
+					<label for="remember-me">Lembre-me</label>
+				</div>
+				<div class="form-element">
+					<button class="acesso">Acessar</button>
+				</div>
+				<div class="for-element">
+					<a href="#">Esqueceu sua Senha?</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="pgInicial" data-page="/" style="display: none">
+			<div id="home01Pai">
+				<div id="home01">
+					<h2 id="textoHome01">
+						Somos uma empresa de tecnologia pioneira no estudo psicoemocional em prol da constante evolução do
+						autocontrole emocional e psicológico
+					</h2>
+				</div>
+			</div>
+
+			<div id="home02Pai">
+				<div id="home02">
+					<h2 id="textoHome02">
+						Projeto criado por 3 cientistas e desenvolvedores a fim de proporcionar maior estabilidade e felicidade para
+						o ser humano
+						<br />
+						A proposta da empresa é trazer maior controle de suas emoções e comportamentos<br />
+						Criado em 2035 e inaugurado em 2050 a Emovere Corporation tem o prazer de anunciar o primeiro dispositivo de
+						comportamento neural, o
+						<span id="Nexus">Nexus</span><br />
+						Basta escolher em <span id="lj">Loja</span> o comportamento que deseja adquirir e em até 24 horas contemple
+						a sua própria evolução
+					</h2>
+				</div>
+			</div>
+			<div id="home03Pai">
+				<img src="./imagens/home03.png" />
+				<div id="home03">
+					<h2 id="textoHome03">
+						Não ter controle das próprias emoções e comportamentos ficou no passado Hoje podemos ter tudo em nossas
+						mãos<br />
+						Ou melhor: em nossas mentes!
+					</h2>
+				</div>
+			</div>
+		</div>
+
+		<div data-page="/criarconta" style="display: none" class="container">
+			<div class="content first-content">
+				<div class="first-column">
+					<h2 class="title title-primary">Bem vindo de volta!</h2>
+					<p class="description description-primary">Para se manter conectado,</p>
+					<p class="description description-primary">favor entre com suas informações pessoais</p>
+					<button id="signin" class="btn btn-primary">Entrar</button>
+				</div>
+				<div class="second-column">
+					<h2 class="title title-second">criar conta</h2>
+					<form class="form">
+						<label class="label-input" for="">
+							<i class="far fa-user icon-modify"></i>
+							<input type="text" placeholder="Nome completo" id="nome" />
+						</label>
+						<label class="label-input" for="">
+							<i class="far fa-user icon-modify"></i>
+							<input type="number" placeholder="CPF" id="CPF" />
+						</label>
+						<label class="label-input" for="">
+							<i class="far fa-user icon-modify"></i>
+							<input type="number" placeholder="Identificador do microchip" id="identificador" />
+						</label>
+						<label class="label-input" for="">
+							<i class="far fa-envelope icon-modify"></i>
+							<input type="email" placeholder="E-mail" id="email1" />
+						</label>
+
+						<label class="label-input" for="">
+							<i class="fas fa-lock icon-modify"></i>
+							<input type="password" placeholder="Senha" id="password1" />
+						</label>
+
+						<button class="btn btn-second" id="btnCadastro">INSCREVA-SE</button>
+					</form>
+				</div>
+				<!-- second column -->
+			</div>
+			<!-- first content -->
+			<div class="content second-content">
+				<div class="first-column">
+					<h2 class="title title-primary">Olá, amigo!</h2>
+					<p class="description description-primary">Insira seus dados pessoais</p>
+					<p class="description description-primary">e comece sua jornada conosco</p>
+					<button id="signup" class="btn btn-primary">INSCREVER-SE</button>
+				</div>
+				<div class="second-column">
+					<h2 class="title title-second2">Entrar</h2>
+
+					<p class="description description-second">Use seu e-mail para entrar:</p>
+					<form class="form">
+						<label class="label-input" for="">
+							<i class="far fa-envelope icon-modify"></i>
+							<input type="email" placeholder="E-mail" id="email2" />
+						</label>
+
+						<label class="label-input" for="">
+							<i class="fas fa-lock icon-modify"></i>
+							<input type="password" placeholder="Senha" id="password2" />
+						</label>
+
+						<a class="password" href="#">esqueceu sua senha?</a>
+						<button class="btn btn-second" id="btnLogin">entrar</button>
+					</form>
+				</div>
+				<!-- second column -->
+			</div>
+			<!-- second-content -->
+		</div>
+
+		<div data-page="/store" style="display: none" id="loja">
+			<h2 id="tituloLoja">LOJA</h2>
+		</div>
+		<div data-page="/store/$" style="display: none" id="espaçoProduto"></div>
+
+		<div class="containerMinhaConta" data-page="/minhaconta" style="display: none">
+			<h2 id="tituloMinhaConta">Minha conta</h2>
+
+			<div class="contentMinhaConta">
+				<form class="form">
+					<label class="label-input" for="">
+						<i class="far fa-user icon-modify"></i>
+						<input type="text" placeholder="Nome completo" id="nameUpdt" />
+					</label>
+					<label class="label-input" for="">
+						<i class="far fa-user icon-modify"></i>
+						<input type="number" placeholder="CPF" id="cpfUpdt" />
+					</label>
+					<label class="label-input" for="">
+						<i class="far fa-user icon-modify"></i>
+						<input type="number" placeholder="Identificador do microchip" id="identificadorUpdt" />
+					</label>
+					<label class="label-input" for="">
+						<i class="far fa-envelope icon-modify"></i>
+						<input type="email" placeholder="E-mail" id="emailUpdt" />
+					</label>
+
+					<label class="label-input" for="">
+						<i class="fas fa-lock icon-modify"></i>
+						<input type="password" placeholder="Senha" id="passwordUpdt" />
+					</label>
+
+					<button class="btnMinhaConta" id="btnUpdt">ALTERAR DADOS</button>
+				</form>
+			</div>
+		</div>
+
+		<div data-page="/depoimentos" style="display: none">
+			<div id="depoimentos">
+				<h2 id="tituloDepoimentos">QUEM USA CURTE E INDICA</h2>
+
+				<div class="gallery autoplay items-3">
+					<div id="item-1" class="control-operator"></div>
+					<div id="item-2" class="control-operator"></div>
+					<div id="item-3" class="control-operator"></div>
+
+					<figure class="item">
+						<img src="./imagens/depoimentos/depo1.png" />
+						<p class="nomeDepo">
+							Heitor Francis, 33 anos, São Paulo<br />
+							Usa Nexus há 5 anos
+						</p>
+						<p class="textoDepo">
+							“Usar Nexus mudou a minha vida. Antes tinha muito problema com ansiedade e ao adquirir o produto melhorei
+							100% no meu quadro e tenho muito mais foco no trabalho e em meus projetos.”
+						</p>
+					</figure>
+					<figure class="item">
+						<img src="./imagens/depoimentos/depo2.png" />
+						<p class="nomeDepo">
+							Zoe Bit, 30 anos, Rio de Janeiro<br />
+							Usa Nexus há 7 anos
+						</p>
+						<p class="textoDepo">
+							Nexus mudou a minha vida pra melhor!<br />
+							Recomento demais!
+						</p>
+					</figure>
+					<figure class="item">
+						<img src="./imagens/depoimentos/depo3.png" />
+						<p class="nomeDepo">
+							Aurora German, 33 anos, Rio Grande do Sul<br />
+							Usa Nexus há 8 anos
+						</p>
+						<p class="textoDepo">Não vivo mais sem Nexus!!!</p>
+					</figure>
+
+					<div class="controls">
+						<a href="#item-1" class="control-button">•</a>
+						<a href="#item-2" class="control-button">•</a>
+						<a href="#item-3" class="control-button">•</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-page="/carrinho" style="display: none" id="pageCarrinho">
+			<!-- <h2 id="tituloCarrinho">CARRINHO</h2> -->
+			<div id="carrinho"></div>
+		</div>
+
+		<div data-page="/finalizada" style="display: none" id="finalizada">
+			<div id="compraFinalizada">
+				<p class="text">
+					COMPRA EFETIVADA!<br />
+					Obrigado por comprar na emovere corporation<br />
+					Em até 24 horas contemple sua própria evolução
+				</p>
+				<img class="imgFinalizada" src="./imagens/imgFinaliza.png" />
+			</div>
+		</div>
+
+		<div id="popupCadastro" style="display: none">
+			<div id="btnfecharpopup1">[X]</div>
+			<br />
+			<h2>Cadastrado com sucesso!</h2>
+			<br />
+			<p id="fzrLogin1">Faça seu login!</p>
+		</div>
+
+		<div id="popupSenha" style="display: none">
+			<div id="btnfecharpopup2">[X]</div>
+			<br />
+			<h2>Senha incorreta!</h2>
+			<br />
+			<p id="fzrLogin2">Tente novamente!</p>
+		</div>
+
+		<div data-page="/logout" style="display: none" id="pagLogout">
+			<a href="/" data-link>Ir para página inicial</a>
+		</div>
+
+		<script src="./src/spa.js"></script>
+		<script src="./src/script.js" type="module"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

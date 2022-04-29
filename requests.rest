@@ -1,0 +1,48 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Bob",
+    "email": "bob@email.com",
+    "password": "bob"
+}
+
+###
+GET http://localhost:8080/api/users
+authorization: Bearer 
+
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@email.com",
+    "password": "123456789"
+}
+
+###
+GET http://localhost:3000/api/auth/refresh_token
+
+### 
+DELETE http://localhost:3000/api/auth/refresh_token
+
+###
+GET http://localhost:3000/api/store/products
+
+###
+GET http://localhost:8080/api/user/update
+Content-Type: application/json
+
+{
+    "id": "a64fd4b5-9069-4ba0-9259-4568185400f1"
+}
+
+###
+POST http://localhost:8080/api/delLST
+Content-Type: application/json
+
+{
+    "id":"dddc8645-bfaf-4a53-8cc0-16331e8b11c2",
+    "history":"felicidade"
+}
